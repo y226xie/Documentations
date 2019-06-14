@@ -17,7 +17,8 @@
   }
 }
 ```
-Then make sure you use the project ID that we had copied to replace with **your-firebase-project-id**
+Then make sure you use the project ID that we had copied to replace with **your-firebase-project-id**.
+
 11. Then, Again, from the root folder create a new file **firebase.json** with following content: 
 
 ```
