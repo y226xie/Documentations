@@ -5,7 +5,7 @@ There are two main ways to implement it:
 2. create your own service
 
 
-##Using 3-rd party service
+## Using 3-rd party service
 
 Main steps: 
 1. 
