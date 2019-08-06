@@ -113,6 +113,9 @@ class Email extends Component {
 export default Email
 
 ```
+Finally, we need to go to emailjs.com to create a new account. After setting that up, we can copy the required credientials to our code to replace TEMPLATE_ID, USER_ID, and services.
+
+Done! ☺️
 
 
 
