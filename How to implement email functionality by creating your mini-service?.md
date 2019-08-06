@@ -42,3 +42,43 @@ npm i -s nodemailer
 
 ```
 
+Then, insider the Server.js file implement the following code:
+
+```
+const express = require('express')
+const nodeoutlook = require('nodejs-nodemailer-outlook')
+const bodyParser = require('body-parser')
+const app = express()
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
+
+app.post('/api/email', (req, res) => {
+     nodeoutlook.sendEmail({
+         auth: {
+             user: 'YOUR_OUTLOOK_EMAIL',
+             pass: 'YOUR_PASSWORD'
+         },
+         from: 'YOUR_OUTLOOK_EMAIL_ADDRESS', // this must be exactly the same as the user params in auth, otherwise, you will recieved error message from outlook
+         to: req.body.email,
+         subject: "Here is a email from YOUR_NAME"
+         html:`<div>
+                    <div>
+                    Hello ${req.body.name}
+                    </div>
+                    <div>Here is your message</div>
+                </div>`,
+
+       // attachments: [{
+           // filename: filename,
+            //content: fileContent,
+       // }]
+        onError: (e) => console.log(e),
+        onSuccess: (i) => console.log(i)
+     })
+})
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => {
+    console.log(`Server Listening on port ${PORT}`)
+})
+```
