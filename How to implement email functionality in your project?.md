@@ -137,5 +137,21 @@ npm init --yes
 ```
 
 That would create a basic package.json file for us
+Inside email folder, install the following dependencies:
 
+```
+npm i -s express
+npm i -s body-parser
+```
+
+If you want to use outlook client, you can install nodejs-nodemailer-outlook. Otherwise, we can use nodemailer
+
+```
+npm i -s nodejs-nodemailer-outlook
+```
+or
+```
+npm i -s nodemailer
+
+```
 
