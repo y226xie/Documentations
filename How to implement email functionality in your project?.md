@@ -117,6 +117,25 @@ Finally, we need to go to emailjs.com to create a new account. After setting tha
 
 Done! ☺️
 
+## Create you own Mini-Service
 
+### Overview
+1. Create your own react.js front-end template
+2. Outside of the folder of your project, create a file called server.js which is going to perform sending email functionality
+
+Create a folder called email before we start anything
+then Open Terminal, and run
+
+```
+npx create-react-app client
+```
+Outside of client folder, but inside of the email folder, create a Javascipt file called Server.js
+
+Inside the email folder, run
+```
+npm init --yes
+```
+
+That would create a basic package.json file for us
 
 
