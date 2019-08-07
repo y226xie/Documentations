@@ -178,3 +178,4 @@ Command for running the React Appliction:
 ```
 npm start
 ```
+Done! ☺️
