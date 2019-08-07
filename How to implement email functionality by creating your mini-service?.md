@@ -66,7 +66,7 @@ app.post('/api/email', (req, res) => {
                     <div>
                     Hello ${req.body.name}
                     </div>
-                    <div>Here is your message</div>
+                    <div>${req.body.otherInfo}</div>
                 </div>`,
 
        // attachments: [{
@@ -81,4 +81,91 @@ const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
     console.log(`Server Listening on port ${PORT}`)
 })
+```
+
+Then, we finish the setting for our mini-service. Our next step is to call our mini-service in our front-end code
+
+Fist, we will jump into client folder and install some dependencies:
+
+```
+npm i -s axios
+npm i -s reactstrap
+```
+
+Implement the following code in App.js file in client folder
+
+```
+import React, { Component } from "react"
+import { Form, FormGroup, Input, Label, Button } from "reactstrap"
+import axios from 'axios'
+
+class Email extends Component {
+    constructor() {
+        this.state = {
+            name: "",
+            email: "",
+            otherInfo: "",
+        }
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+
+    handleChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    async handleSubmit(e) {
+        const { name, email, otherInfo} = this.state
+        await axios.post('/api/email', {
+            name,
+            email,
+            otherInfo
+        })
+
+    }
+
+    render() {
+        return (
+            <div>
+                <Form>
+                    <FormGroup onSubmit={this.handleSubmit}>
+                        <Label for='name'>
+                            Name
+                        </Label>
+                        <Input
+                        type="text"
+                        name="name"
+                        onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for='email'>
+                            Email
+                        </Label>
+                        <Input
+                        type="email"
+                        name="email"
+                        onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for='otherInfo'>
+                            Other Info
+                        </Label>
+                        <Input
+                        type="text"
+                        name="otherInfo"
+                        onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                </Form>
+            </div>
+        );
+    }
+}
+
+export default Email
 ```
