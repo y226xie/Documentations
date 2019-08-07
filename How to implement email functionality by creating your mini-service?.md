@@ -169,3 +169,12 @@ class Email extends Component {
 
 export default Email
 ```
+In your terminal, make sure you run the server.js file before you run the react application
+Command for running the Server.js file:
+```
+node Server.js
+```
+Command for running the React Appliction:
+```
+npm start
+```
