@@ -18,4 +18,4 @@
 1. `git stash` to save your local changes (consider it as `cut`)
 2. `git stash pop` to let your changes show up (consider it as `paste`)
 3. `git stash drop` would delete all your changes (consider it as select certain info then `delete` the info)
-
+4. `git commit --amend` would add/include you current commit to your last commit
