@@ -1,4 +1,4 @@
-##My personal React Development Notes
+## My personal react development notes
 
 Topics:
 1. Conditionally disable submit button in the form
