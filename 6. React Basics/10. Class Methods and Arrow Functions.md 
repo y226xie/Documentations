@@ -1,0 +1,20 @@
+# Class Methods and Arrow functions
+
+## this keyword
+
+* `this` key word is a special keyword in Javascript that references the context in which it's being invoked.
+
+* when we use `this` keyword in the lifecycle method as well as the render. The `this` keyword is bound. It's been bound is because we call `super()` inside our compoent and we are actually extending the functionality that exists on the component from React.
+
+## Why we need to bind functions
+
+* However, by default Javascript doesn't set its scope of `this` on functions. We have to explicity state what context we want `this` to be. That's why we need to `bind` functions inside the constructor.
+
+## bind()
+
+* `bind()` is a method on any function that returns a new funtion where the context of `this` is set to whatever we passed to it.
+
+* Instead of binding every single function inside the `constructor`, what we can do is that we can use Arrow functions.
+
+* Arrow functions automatically allow us to set `this` when this arrow function was defined in the first place. This is because of the `lexical scoping` of the arrow function
+
