@@ -10,3 +10,4 @@
     2. Conditionally disable submit button in the form
     3. Pre-populated one input field according to the value of the other input field
     4. Create your own File uploader from front end to back end
+6. Notes about different components and key features about React && some useful Javascript functions
