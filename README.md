@@ -14,3 +14,31 @@
 7. Python Notes
     1. Variables
     2. Data Types
+    3. Numbers
+    4. Casting
+    5. Strings
+    6. Booleans
+    7. Operators
+    8. Lists
+    9. Tuples
+    10. Sets
+    11. Dictionaries
+    12. If&else
+    13. While
+    14. For
+    15. Functions
+    16. Lambda
+    17. Arrays
+    18. Classes/Objects
+    19. Inheritance
+    20. Iterators
+    21. Scope
+    22. Modules
+    23. Dates
+    24. JSON
+    25. RegEx
+    26. PIP
+    27. Try...Except
+    28. User Input
+    29. String Formatting
+    
