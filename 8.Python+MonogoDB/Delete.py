@@ -22,6 +22,7 @@
 
 # Delete Many Documents
 # to delete more than one document, use the delete_many() method
+# The following example delete all documents were the address starts with the letter S
 
 import pymongo
 
