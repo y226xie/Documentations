@@ -1,6 +1,6 @@
 # Accessing user's contact information, and location info from alexa skills
 
-* Currently, Amazon’s official docs does not provide 1 endpoint which can give us all info we need. They kept them separately.
+Currently, Amazon’s official docs does not provide 1 endpoint which can give us all info we need. They kept them separately.
 
 ### According to Amazon’s docs, we need to call 4 or 5 different endpoints :
 * URL for email endpoint: https://api.amazonalexa.com/v2/accounts/~current/settings/Profile.email
